@@ -33,7 +33,7 @@ export default function App() {
 
   return (
     <div style={{ maxWidth: 500, margin: '60px auto', fontFamily: 'sans-serif', padding: '0 20px' }}>
-      <h1 style={{ fontSize: 28, marginBottom: 24 }}>Task Manager</h1>
+      <h1 style={{ fontSize: 28, marginBottom: 24 }}>Bindu Task Manager</h1>
 
       <div style={{ display: 'flex', gap: 8, marginBottom: 32 }}>
         <input
