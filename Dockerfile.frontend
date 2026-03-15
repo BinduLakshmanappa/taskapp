@@ -1,4 +1,4 @@
-FROM node:18-slim
+FROM node:18-slim AS build
 
 WORKDIR /app
 
@@ -7,6 +7,11 @@ RUN npm ci
 
 COPY frontend/ .
 
-EXPOSE 5173
+RUN npm run build
 
-CMD ["./node_modules/.bin/vite", "--host", "0.0.0.0"]
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

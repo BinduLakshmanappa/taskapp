@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(u@g!xve8a=1vt3bi#(%-u^(mgo0+m-v6!qmik=7ejan5@2@$e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['taskapp-backend-7u53.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -57,7 +57,10 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://taskapp-frontend-e2c6.onrender.com",  # we'll update this soon
 ]
+
+CORS_ALLOW_ALL_ORIGINS = False
 
 ROOT_URLCONF = 'backend.urls'
 

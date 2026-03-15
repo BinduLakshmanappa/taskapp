@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const API = 'http://localhost:8000/api/tasks/'
+const API = 'https://taskapp-backend-7u53.onrender.com/api/tasks/'
 
 export default function App() {
   const [tasks, setTasks] = useState([])
